@@ -1,6 +1,5 @@
 function isOdd(a) {
- let result = a % 2 === 0;
- return result;
+ return a % 2 === 0;
 }
 
 window.isOdd = isOdd;
