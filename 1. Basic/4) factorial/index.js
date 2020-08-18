@@ -1,5 +1,7 @@
 function factorial(n) {
-  // Напиши свой код здесь
+if (n !== 1) n = n * factorial(n-1);
+    else n = 1;
+    return n;
 }
 
 window.factorial = factorial;
