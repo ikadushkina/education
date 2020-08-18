@@ -1,5 +1,7 @@
 function sum(a, b) {
-  //Напиши свой код здесь
+  a = Numder(prompt("Введите а:", 5));
+  b = Numder(prompt("Введите b:", 10));
+  alert(a + b);
 };
 
 window.sum = sum;
