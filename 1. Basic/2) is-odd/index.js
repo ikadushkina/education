@@ -1,8 +1,8 @@
 function isOdd(a) {
- if (a & 1) alert ("Нечетное");
-  else alert ("Четное");
+ let result;
+ result = a % 2 === 0;
+ return result;
 }
 
 window.isOdd = isOdd;
-
 export default isOdd;
