@@ -1,5 +1,6 @@
 function isOdd(a) {
-  //Напиши свой код здесь
+ if (a & 1) alert ("Нечетное");
+  else alert ("Четное");
 }
 
 window.isOdd = isOdd;
