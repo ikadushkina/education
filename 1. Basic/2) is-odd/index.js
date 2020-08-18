@@ -1,6 +1,5 @@
 function isOdd(a) {
- let result;
- result = a % 2 === 0;
+ let result = a % 2 === 0;
  return result;
 }
 
