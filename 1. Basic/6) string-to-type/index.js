@@ -1,5 +1,5 @@
 function stringToType(str) {
-    if (str === "") str = '';
+    if (str === "") str = "";
     else {
         if (str === "true") str = true;
         else {
