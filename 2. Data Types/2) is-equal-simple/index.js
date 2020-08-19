@@ -1,14 +1,22 @@
 function isEqual(a, b) {
-    let newA = "", newB = "";
-    if (a && b) {
-        for (let key in a) {
-            newA += `${key}:${a[key]}`;
-        }
+    if (!a || !b) return  false;
 
-        for (let key in b)
-            newB += `${key}:${b[key]}`;;
-        return newA === newB;
-    } else return false;
+    for (let key in a) {
+        if (a.hasOwnProperty(key)) {
+            if (a[key] !== b[key] || !b.hasOwnProperty(key)) {
+                return false;
+            }
+        }
+    }
+    for (let key in b) {
+        if (b.hasOwnProperty(key)) {
+            if (a[key] !== b[key] || !a.hasOwnProperty(key)) {
+                return false;
+            }
+        }
+    }
+
+    return true;
 }
 
 window.isEqual = isEqual;
