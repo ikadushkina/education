@@ -1,11 +1,10 @@
 function searchString(obj) {
     let result = '?';
-    for ( let key in obj) {
-        if (obj[key] !== null && obj[key] !== undefined && obj[key] !== '') result += key + '=' + obj[key] + "&";
+    for (let key in obj) {
+        const isEmpty = obj[key] !== null && obj[key] !== undefined && obj[key] !== '';
+        if (isEmpty) result += key + '=' + obj[key] + "&";
     }
-    if (result === "?") result = "";
-    else  result = result.substr(0,result.length-1);
-    return result;
+    return result === "?" ? "" : result.substr(0, result.length - 1);
 }
 
 window.searchString = searchString;
