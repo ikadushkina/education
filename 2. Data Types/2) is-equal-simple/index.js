@@ -1,13 +1,13 @@
 function isEqual(a, b) {
-    let a1 = "", b1 = "";
-    if (a && b !== null) {
+    let newA = "", newB = "";
+    if (a && b) {
         for (let key in a) {
-            a1 += key + ":" + a[key];
+            newA += `${key}:${a[key]}`;
         }
 
         for (let key in b)
-            b1 += key + ":" + b[key];
-        return a1 === b1;
+            newB += `${key}:${b[key]}`;;
+        return newA === newB;
     } else return false;
 }
 
