@@ -1,5 +1,5 @@
 function stringToType(str) {
-    if (str === "") str = "";
+ /*   if (str === "") str = "";
     else {
         if (str === "true") str = true;
         else {
@@ -15,7 +15,26 @@ function stringToType(str) {
             }
         }
     }
+
     return str;
+   */
+   switch (str) {
+       case "":
+           return "";
+       case "true":
+           return true;
+       case "false":
+           return false;
+       case "null":
+           return null;
+       case "undefined":
+           return undefined;
+
+   }
+   switch (!isNaN(Number(str))){
+        case true: return Number(str);
+        default: return str;
+    }
 
 }
 
