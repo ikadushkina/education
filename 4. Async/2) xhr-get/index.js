@@ -6,7 +6,7 @@ function xhrGet(url) {
         xhr.responseType = 'json';
         xhr.send();
         xhr.onload = function () {
-            if (xhr.status === 200 || xhr.status === 201) {
+            if (xhr.status >= 200 && xhr.status < 300) {
                 resolve(xhr.response);
             }
             reject(xhr.response);
