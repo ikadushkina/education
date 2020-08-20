@@ -7,11 +7,9 @@ function arraysSort(arr) {
         return elemMax;
     }
     let sort = (a, b) => {
-        if (max(a) > max(b)) return 1;
-        if (max(a) < max(b)) return -1;
-        return 0;
-    }
-    let newArr = [...arr]
+        return max(a) - max(b)
+}
+    const newArr = [...arr]
     return newArr.sort(sort);
 }
 
