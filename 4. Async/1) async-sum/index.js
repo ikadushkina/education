@@ -5,7 +5,6 @@ function asyncSum(a, b) {
         else reject("error");
     });
 }
-
 window.asyncSum = asyncSum;
 
 export default asyncSum;
