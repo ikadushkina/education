@@ -3,14 +3,19 @@
     <title>TEST TASK</title>
     <meta charset="UTF-8">
     <script src="test.js"></script>
+    <style>
+        .vertical {
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
-    <div ID="items">
-        <div id="inputs-container" style="text-align:left">
+        <div id="inputs-container" class="vertical">
             <label>Поле 1</label>
             <input type="text" id="0" name="item1">
         </div>
-        <input type="button" value="Добавить поле+" onClick="addItem()"  ID="add">
-    </div>
+        <input type="button" value="Добавить поле+" onClick="addItem()">
 </body>
 </html>
