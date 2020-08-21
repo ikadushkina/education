@@ -1,19 +1,5 @@
 function queryToObject(query) {
      if (!query.length || query === "?") return {};
-    // var result = {};
-    // var a = "a=true&b=false&c=123&d=0".split('&').map(i => i.split("="))
-    // console.log(a)
-    // a.forEach((item) => {
-    //     result[item[0]]= item[1]
-    // })
-    // console.log('result', result)
-    //
-    // let result = query.split("").map((item) => {
-    //     if (item === '?') return '';
-    //     if (item === "=") return ":"
-    //     if (item === "&") return ","
-    //     return item;
-    // })
     let arr = query.split("");
     let string = "";
     for (let i = 0; i < arr.length; i++) {
@@ -30,7 +16,7 @@ function queryToObject(query) {
     }
 
     let obj = JSON.parse('{ "' + string + '"}');
-     console.log(obj);
+
     for(let key in obj) {
         switch (obj[key]) {
             case "":
